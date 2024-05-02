@@ -43,10 +43,16 @@ Now, Let's Talk about the two implemenations:
 2.) In the second implementataion, we use the same methodlogy as above but the differences are that both tasks: TaskBlink() and TaskAnalogRead() are of same priority, we use a Semaphore instead of a Global Boolean variable. Here, as well the RED LED starts blinking once the program is loaded onto Arduino as that is the only task which can take the access to the Semaphore. Once, the Potentiometer is rotated whcih enables the Interrupt and set the BIT_0 of the Event Group, we see the BLUE LED turn on meaning the Semaphore is accessed by TaskAnalogRead() function and then the RED LED starts blinking untill the potentiometer is rotated again.
 
 Resources:
+
 1.) https://www.freertos.org/FreeRTOS-Event-Groups.html
+
 2.) https://www.freertos.org/taskandcr.html
+
 3.) https://www.freertos.org/Embedded-RTOS-Binary-Semaphores.html
+
 4.) https://github.com/leomil72/analogComp
+
 5.) https://www.hackster.io/yeshvanth_muniraj/analog-comparator-module-in-atmega328p-migrating-to-c-7502ea
+
 6.) https://www.digikey.ca/en/maker/projects/what-is-a-realtime-operating-system-rtos/28d8087f53844decafa5000d89608016
 
